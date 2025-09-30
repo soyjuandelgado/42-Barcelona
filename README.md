@@ -90,3 +90,78 @@ touch -r referencia.txt archivo.txt
 
 
 
+### Autenticacion GitHub
+
+Ese error te aparece porque **GitHub ya no permite autenticación con usuario/contraseña en operaciones `git push`**.
+Ahora necesitas usar un **token personal (PAT)** o **SSH**. Te explico cómo resolverlo:
+
+---
+
+### ✅ Opción 1: HTTPS con token personal
+
+1. Entra a tu cuenta de GitHub → [Tokens](https://github.com/settings/tokens)
+   (mejor: **"Fine-grained personal access tokens"**).
+
+2. Crea un token con permisos de:
+
+   * `repo` (acceso completo al repo privado/público).
+   * `workflow` (si necesitas actions).
+
+3. Copia el token (solo se muestra una vez).
+
+4. Cambia el **remote** de tu repo local para usar el token:
+
+   ```bash
+   git remote set-url origin https://<TU_TOKEN>@github.com/soyjuandelgado/42-Barcelona.git
+   ```
+
+   > Ojo: sustituye `<TU_TOKEN>` por el token (no pongas tu usuario).
+
+5. Prueba el push:
+
+   ```bash
+   git push origin main
+   ```
+
+---
+
+### ✅ Opción 2: Autenticación SSH (recomendada)
+
+1. Genera una clave SSH (si no tienes):
+
+   ```bash
+   ssh-keygen -t ed25519 -C "tu_email@ejemplo.com"
+   ```
+
+   (Presiona enter para la ruta por defecto, y pon passphrase si quieres más seguridad).
+
+2. Copia la clave pública:
+
+   ```bash
+   cat ~/.ssh/id_ed25519.pub
+   ```
+
+3. Ve a GitHub → Settings → **SSH and GPG keys** → "New SSH key" → pega la clave.
+
+4. Cambia el remote para usar SSH:
+
+   ```bash
+   git remote set-url origin git@github.com:soyjuandelgado/42-Barcelona.git
+   ```
+
+5. Verifica conexión:
+
+   ```bash
+   ssh -T git@github.com
+   ```
+
+6. Haz push:
+
+   ```bash
+   git push origin main
+   ```
+
+---
+
+👉 Pregunta: ¿quieres que te guíe paso a paso para configurarlo con **token** (más rápido) o con **SSH** (más seguro y a largo plazo)?
+
