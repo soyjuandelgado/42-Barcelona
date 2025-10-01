@@ -165,3 +165,36 @@ Ahora necesitas usar un **token personal (PAT)** o **SSH**. Te explico cómo res
 
 👉 Pregunta: ¿quieres que te guíe paso a paso para configurarlo con **token** (más rápido) o con **SSH** (más seguro y a largo plazo)?
 
+
+### Imprimir cabecera
+
+en vim: 
+:Stdheader
+ESC fn+f1
+
+  GNU nano 6.2                  /home/juadelga/.vimrc                           
+let g:user42 = 'juadelga'
+let g:mail42 = 'juadelga@student.42barcelona.com'
+set tabstop=4
+set noexpandtab
+set softtabstop=4
+
+
+  GNU nano 6.2                  /home/juadelga/.zshrc                           
+# Lines configured by zsh-newuser-install
+HISTFILE=~/.histfile
+HISTSIZE=1000
+SAVEHIST=1000
+# End of lines configured by zsh-newuser-install
+# The following lines were added by compinstall
+zstyle :compinstall filename '/home/juadelga/.zshrc'
+
+autoload -Uz compinit
+compinit
+# End of lines added by compinstall
+
+export USERNAME="juadelga"
+export EMAIL="juadelga@student.42barcelona.com"
+export MAIL="juadelga@student.42barcelona.com"
+
+
