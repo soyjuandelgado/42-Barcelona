@@ -1,20 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_div_mod.c                                       :+:      :+:    :+:   */
+/*   ft_putchar.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: juadelga <juadelga@student.42barcelon      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/10/01 16:50:22 by juadelga          #+#    #+#             */
-/*   Updated: 2025/10/01 16:50:33 by juadelga         ###   ########.fr       */
+/*   Created: 2025/10/01 17:46:57 by juadelga          #+#    #+#             */
+/*   Updated: 2025/10/01 17:47:03 by juadelga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	ft_div_mod(int a, int b, int *div, int *mod)
+#include <unistd.h>
+
+void	ft_putchar(char c)
 {
-	if (b != 0)
-	{
-		*div = a / b;
-		*mod = a % b;
-	}
+	write(1, &c, 1);
 }

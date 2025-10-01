@@ -1,20 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_div_mod.c                                       :+:      :+:    :+:   */
+/*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: juadelga <juadelga@student.42barcelon      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/10/01 16:50:22 by juadelga          #+#    #+#             */
-/*   Updated: 2025/10/01 16:50:33 by juadelga         ###   ########.fr       */
+/*   Created: 2025/10/01 17:47:18 by juadelga          #+#    #+#             */
+/*   Updated: 2025/10/01 17:47:22 by juadelga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	ft_div_mod(int a, int b, int *div, int *mod)
+void	ft_print_alphabet(void);
+
+int	main(void)
 {
-	if (b != 0)
-	{
-		*div = a / b;
-		*mod = a % b;
-	}
+	ft_print_alphabet();
 }
