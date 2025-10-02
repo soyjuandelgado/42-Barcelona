@@ -1,27 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_strswap.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: juadelga <juadelga@student.42barcelon      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/10/01 16:50:46 by juadelga          #+#    #+#             */
-/*   Updated: 2025/10/02 19:49:34 by juadelga         ###   ########.fr       */
+/*   Created: 2025/10/02 19:08:24 by juadelga          #+#    #+#             */
+/*   Updated: 2025/10/02 19:08:53 by juadelga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <stdlib.h>
-
-#include "ft_recursive_factorial.c"
-
-int	main(int argc, char **argv)
+void	ft_strswap(char **s1, char **s2)
 {
-	if (argc != 2)
-		printf("Usage: ft_recursive_factorial num\n");
-	else
-	{
-		printf("n=%d, res=%d", atoi(argv[1]), ft_recursive_factorial(atoi(argv[1])));
-	}
-	return (0);
+	char	*tmp;
+
+	if (!s1 || !s2)
+		return ;
+	tmp = *s1;
+	*s1 = *s2;
+	*s2 = tmp;
 }
