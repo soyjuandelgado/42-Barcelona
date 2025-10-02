@@ -1,24 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_iterative_factorial.c                           :+:      :+:    :+:   */
+/*   ft_sqrt.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: juadelga <juadelga@student.42barcelon      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/10/01 18:48:03 by juadelga          #+#    #+#             */
-/*   Updated: 2025/10/02 17:41:29 by juadelga         ###   ########.fr       */
+/*   Created: 2025/10/02 17:48:07 by juadelga          #+#    #+#             */
+/*   Updated: 2025/10/02 18:50:41 by juadelga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_iterative_factorial(int nb)
+int	ft_sqrt(int nb)
 {
-	int		res;
+	int	i;
 
-	res = 0;
-	while (nb > 0)
+	i = 0;
+	while (i * i <= nb && i <= 46340)
 	{
-		res = res + nb;
-		nb--;
+		if (i * i == nb)
+			return (i);
+		i++;
 	}
-	return (res);
+	return (0);
 }

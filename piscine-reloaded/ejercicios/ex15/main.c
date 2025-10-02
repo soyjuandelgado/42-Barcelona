@@ -1,24 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_iterative_factorial.c                           :+:      :+:    :+:   */
+/*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: juadelga <juadelga@student.42barcelon      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/10/01 18:48:03 by juadelga          #+#    #+#             */
-/*   Updated: 2025/10/02 17:41:29 by juadelga         ###   ########.fr       */
+/*   Created: 2025/10/01 16:50:46 by juadelga          #+#    #+#             */
+/*   Updated: 2025/10/02 18:08:38 by juadelga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_iterative_factorial(int nb)
-{
-	int		res;
+#include <stdio.h>
 
-	res = 0;
-	while (nb > 0)
-	{
-		res = res + nb;
-		nb--;
-	}
-	return (res);
+void    ft_putstr(char *str);
+
+int	main(void)
+{
+	ft_putstr("hola");
+	return (0);
 }

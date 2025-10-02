@@ -1,24 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_iterative_factorial.c                           :+:      :+:    :+:   */
+/*   ft_putstr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: juadelga <juadelga@student.42barcelon      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/10/01 18:48:03 by juadelga          #+#    #+#             */
-/*   Updated: 2025/10/02 17:41:29 by juadelga         ###   ########.fr       */
+/*   Created: 2025/10/02 18:00:30 by juadelga          #+#    #+#             */
+/*   Updated: 2025/10/02 18:09:43 by juadelga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_iterative_factorial(int nb)
-{
-	int		res;
+void	ft_putchar(char c);
 
-	res = 0;
-	while (nb > 0)
+void	ft_putstr(char *str)
+{
+	int	i;
+
+	i = 0;
+	while (*(str + i) != '\0')
 	{
-		res = res + nb;
-		nb--;
+		ft_putchar(*(str + i));
+		i++;
 	}
-	return (res);
 }
