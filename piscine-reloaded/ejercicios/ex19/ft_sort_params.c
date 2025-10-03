@@ -6,7 +6,7 @@
 /*   By: juadelga <juadelga@student.42barcelona.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/02 18:25:50 by juadelga          #+#    #+#             */
-/*   Updated: 2025/10/03 10:14:31 by juadelga         ###   ########.fr       */
+/*   Updated: 2025/10/03 11:04:56 by juadelga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,13 +57,20 @@ void	ft_strswap(char **s1, char **s2)
 int	main(int argc, char **argv)
 {
 	int	i;
+	int	j;
 
 	i = 2;
-	while (i < argc)
+	j = 1;
+	while (j <= argc)
 	{
-		if ((ft_strcmp(argv[i - 1], argv[i]) > 0)
-			ft_strswap(argv[i - 1], argv[i]);
-		i++;
+		while (i < argc)
+		{
+			if (ft_strcmp(argv[i - 1], argv[i]) > 0)
+				ft_strswap(&argv[i - 1], &argv[i]);
+			i++;
+		}
+		i = 2;
+		j++;
 	}
 	i = 1;
 	while (i < argc)
