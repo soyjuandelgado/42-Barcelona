@@ -1,27 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_count_if.c                                      :+:      :+:    :+:   */
+/*   ft_point.h                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: juadelga <juadelga@student.42barcelona.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/10/03 15:29:04 by juadelga          #+#    #+#             */
-/*   Updated: 2025/10/03 18:05:28 by juadelga         ###   ########.fr       */
+/*   Created: 2025/10/03 11:29:07 by juadelga          #+#    #+#             */
+/*   Updated: 2025/10/03 11:31:04 by juadelga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_count_if(char **tab, int (*f)(char*))
-{
-	int	res;
-	int	i;
+#ifndef FT_POINT_H
+# define FT_POINT_H
 
-	res = 0;
-	i = 0;
-	while (tab[i])
-	{
-		if (f(tab[i]) == 1)
-			res++;
-		i++;
-	}
-	return (res);
-}
+typedef struct s_point
+{
+	int	x;
+	int	y;
+}		t_point;
+
+#endif

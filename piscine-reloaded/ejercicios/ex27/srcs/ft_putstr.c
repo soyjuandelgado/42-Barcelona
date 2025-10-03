@@ -1,27 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_count_if.c                                      :+:      :+:    :+:   */
+/*   ft_putstr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: juadelga <juadelga@student.42barcelona.    +#+  +:+       +#+        */
+/*   By: juadelga <juadelga@student.42barcelon      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/10/03 15:29:04 by juadelga          #+#    #+#             */
-/*   Updated: 2025/10/03 18:05:28 by juadelga         ###   ########.fr       */
+/*   Created: 2025/10/02 18:00:30 by juadelga          #+#    #+#             */
+/*   Updated: 2025/10/02 18:09:43 by juadelga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_count_if(char **tab, int (*f)(char*))
+void	ft_putchar(char c);
+
+void	ft_putstr(char *str)
 {
-	int	res;
 	int	i;
 
-	res = 0;
 	i = 0;
-	while (tab[i])
+	while (*(str + i) != '\0')
 	{
-		if (f(tab[i]) == 1)
-			res++;
+		ft_putchar(*(str + i));
 		i++;
 	}
-	return (res);
 }

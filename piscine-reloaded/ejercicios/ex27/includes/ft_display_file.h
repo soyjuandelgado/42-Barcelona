@@ -1,27 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_count_if.c                                      :+:      :+:    :+:   */
+/*   ft_display_file.h                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: juadelga <juadelga@student.42barcelona.    +#+  +:+       +#+        */
+/*   By: juadelga <juadelga@student.42barcelon      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/10/03 15:29:04 by juadelga          #+#    #+#             */
-/*   Updated: 2025/10/03 18:05:28 by juadelga         ###   ########.fr       */
+/*   Created: 2025/10/03 18:39:15 by juadelga          #+#    #+#             */
+/*   Updated: 2025/10/03 18:40:33 by juadelga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_count_if(char **tab, int (*f)(char*))
-{
-	int	res;
-	int	i;
+#ifndef FT_DISPLAY_FILE_H
+# define FT_DISPLAY_FILE_H
 
-	res = 0;
-	i = 0;
-	while (tab[i])
-	{
-		if (f(tab[i]) == 1)
-			res++;
-		i++;
-	}
-	return (res);
-}
+void	ft_putchar(char c);
+void	ft_putstr(char *str);
+//int		ft_strcmp(char *s1, char *s2);
+//int		ft_strlen(char *str);
+//void	ft_swap(int *a, int *b);
+
+#endif

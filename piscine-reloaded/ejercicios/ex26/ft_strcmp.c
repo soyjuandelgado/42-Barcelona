@@ -1,26 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_count_if.c                                      :+:      :+:    :+:   */
+/*   ft_strcmp.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: juadelga <juadelga@student.42barcelona.    +#+  +:+       +#+        */
+/*   By: juadelga <juadelga@student.42barcelon      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/10/03 15:29:04 by juadelga          #+#    #+#             */
-/*   Updated: 2025/10/03 18:05:28 by juadelga         ###   ########.fr       */
+/*   Created: 2025/10/02 18:17:17 by juadelga          #+#    #+#             */
+/*   Updated: 2025/10/02 18:22:14 by juadelga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_count_if(char **tab, int (*f)(char*))
+int	ft_strcmp(char *s1, char *s2)
 {
-	int	res;
 	int	i;
+	int	res;
+	int	cont;
 
-	res = 0;
 	i = 0;
-	while (tab[i])
+	res = i;
+	cont = 1;
+	while (cont == 1 && res == 0)
 	{
-		if (f(tab[i]) == 1)
-			res++;
+		if (s1[i] == '\0' || s2[i] == '\0')
+			cont = 0;
+		res = s1[i] - s2[i];
 		i++;
 	}
 	return (res);

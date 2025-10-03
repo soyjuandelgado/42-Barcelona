@@ -1,27 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_count_if.c                                      :+:      :+:    :+:   */
+/*   ft_putnbr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: juadelga <juadelga@student.42barcelona.    +#+  +:+       +#+        */
+/*   By: juadelga <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/10/03 15:29:04 by juadelga          #+#    #+#             */
-/*   Updated: 2025/10/03 18:05:28 by juadelga         ###   ########.fr       */
+/*   Created: 2025/02/15 17:46:22 by juadelga          #+#    #+#             */
+/*   Updated: 2025/02/17 10:38:12 by juadelga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_count_if(char **tab, int (*f)(char*))
-{
-	int	res;
-	int	i;
+#include <unistd.h>
 
-	res = 0;
-	i = 0;
-	while (tab[i])
+void	ft_putnbr(int nb)
+{
+	char	c;
+
+	c = '0';
+	if (nb < 0)
 	{
-		if (f(tab[i]) == 1)
-			res++;
-		i++;
+		nb = nb * -1;
+		write(1, "-", 1);
 	}
-	return (res);
+	if (nb > 10)
+	{
+		ft_putnbr(nb / 10);
+		c = (nb % 10) + '0';
+		write(1, &c, 1);
+	}
+	else
+	{
+		c = nb + '0';
+		write(1, &c, 1);
+	}
 }

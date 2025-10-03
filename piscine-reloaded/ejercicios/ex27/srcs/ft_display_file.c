@@ -1,27 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_count_if.c                                      :+:      :+:    :+:   */
+/*   ft_display_file.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: juadelga <juadelga@student.42barcelona.    +#+  +:+       +#+        */
+/*   By: juadelga <juadelga@student.42barcelon      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/10/03 15:29:04 by juadelga          #+#    #+#             */
-/*   Updated: 2025/10/03 18:05:28 by juadelga         ###   ########.fr       */
+/*   Created: 2025/10/03 18:26:44 by juadelga          #+#    #+#             */
+/*   Updated: 2025/10/03 18:44:00 by juadelga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_count_if(char **tab, int (*f)(char*))
-{
-	int	res;
-	int	i;
+#include "ft_display_file.h"
 
-	res = 0;
-	i = 0;
-	while (tab[i])
+int	main(int argc, char **argv)
+{
+	if (argc == 1)
 	{
-		if (f(tab[i]) == 1)
-			res++;
-		i++;
+		ft_putstr("File name missing.");
+		return (0);
 	}
-	return (res);
+	if (argc > 2)
+	{
+		ft_putstr("Too many arguments.");
+		return (0);
+	}
+	ft_putstr("Cannot read file.");
 }
