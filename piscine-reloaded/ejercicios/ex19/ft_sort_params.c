@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_sort_params.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: juadelga <juadelga@student.42barcelon      +#+  +:+       +#+        */
+/*   By: juadelga <juadelga@student.42barcelona.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/02 18:25:50 by juadelga          #+#    #+#             */
-/*   Updated: 2025/10/02 19:53:42 by juadelga         ###   ########.fr       */
+/*   Updated: 2025/10/03 10:14:31 by juadelga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,15 +43,15 @@ int	ft_strcmp(char *s1, char *s2)
 	return (res);
 }
 
-void    ft_strswap(char **s1, char **s2)
+void	ft_strswap(char **s1, char **s2)
 {
-    char    *tmp;
+	char	*tmp;
 
-    if (!s1 || !s2)
-        return ;
-    tmp = *s1;
-    *s1 = *s2;
-    *s2 = tmp;
+	if (!s1 || !s2)
+		return ;
+	tmp = *s1;
+	*s1 = *s2;
+	*s2 = tmp;
 }
 
 int	main(int argc, char **argv)
@@ -65,12 +65,12 @@ int	main(int argc, char **argv)
 			ft_strswap(argv[i - 1], argv[i]);
 		i++;
 	}
-    i = 1;
-    while (i < argc)
-    {
-        ft_putstr(argv[i]);
-        ft_putchar('\n');
-        i++;
-    }
+	i = 1;
+	while (i < argc)
+	{
+		ft_putstr(argv[i]);
+		ft_putchar('\n');
+		i++;
+	}
 	return (0);
 }
