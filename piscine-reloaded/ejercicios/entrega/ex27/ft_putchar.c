@@ -1,28 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_display_file.c                                  :+:      :+:    :+:   */
+/*   ft_putchar.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: juadelga <juadelga@student.42barcelon      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/10/03 18:26:44 by juadelga          #+#    #+#             */
-/*   Updated: 2025/10/03 18:44:00 by juadelga         ###   ########.fr       */
+/*   Created: 2025/10/01 17:46:57 by juadelga          #+#    #+#             */
+/*   Updated: 2025/10/01 17:47:03 by juadelga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_display_file.h"
+#include <unistd.h>
 
-int	main(int argc, char **argv)
+void	ft_putchar(char c)
 {
-	if (argc == 1)
-	{
-		ft_putstr("File name missing.");
-		return (0);
-	}
-	if (argc > 2)
-	{
-		ft_putstr("Too many arguments.");
-		return (0);
-	}
-	ft_putstr("Cannot read file.");
+	write(1, &c, 1);
 }
